@@ -1,11 +1,12 @@
 //Importar o Modulo React
 import React, { Component } from "react";
 import 'react-bootstrap'
-import logo from '../logoBTC.svg';
-import 'bootstrap/dist/css/bootstrap.css'
-import { Container, Nav, Navbar, NavbarBrand, NavDropdown, NavLink } from 'react-bootstrap';
-//import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
 import NavbarCollapse from 'react-bootstrap/esm/NavbarCollapse';
+import CartWidget from "./CartWidget"
+import ItemListContainer from "./ItemListContainer"
+
 
 //Crear componente
 class NavBar extends Component {
@@ -14,11 +15,10 @@ class NavBar extends Component {
       <div className="App">
       
       <Navbar  bg="colorNabVAr" variant="dark" sticky="top" expand="lg" collapseOnSelect>
+        
         <Container>
-          <Navbar.Brand href="#home" >
-            <img alt="imagenTipo" src={logo} width="40" height="40" />{' '}
-            Crypto Marketcap
-          </Navbar.Brand>
+
+          <CartWidget/>
         
           <Navbar.Toggle />
           <NavbarCollapse className="justify-content-end">
@@ -36,9 +36,13 @@ class NavBar extends Component {
         </Container>
       </Navbar>
 
-      <div className="content">
-        Aqui ira el contenido del Header
-      </div>
+      <Container>          
+        <div className=" d-flex justify-content-center flex-wrap"  >
+          <ItemListContainer title="Curso de Trading Basico" phrase="Alcanza tu libertad Financiera" price="$100"/>
+          <ItemListContainer title="Curso de Trading Basico" phrase="Alcanza tu libertad Financiera" price="$100"/>
+          <ItemListContainer title="Curso de Trading Basico" phrase="Alcanza tu libertad Financiera" price="$100"/>
+        </div>
+      </Container>
       
     </div>
       
