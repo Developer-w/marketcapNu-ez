@@ -1,18 +1,17 @@
-* {
+/* * {
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
   text-decoration: none;
-}
+} */
 
 
 
 .bg-colorNabVAr{
-  background-color: blue;
+  background-color: #022e57;
 } 
 
 .content{
-  margin-top: 60px;
-  padding: 12px;
+  padding: 10px;
   height: 3000px;
 }
